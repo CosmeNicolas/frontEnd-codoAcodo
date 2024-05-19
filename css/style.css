@@ -16,12 +16,12 @@
       margin: 0;
       box-sizing: 0;
     }
-    @media (min-width: 344px){
+  /*   @media (min-width: 344px){
         & li{
             margin: 0px 0px 0px 4px;
             font-size: larger;
         }
-    }
+    } */
 
 body{
     min-height: 100vh;
@@ -53,7 +53,8 @@ header{
     }
     & li{
         margin: 0px 0px 0px 4px;
-        font-size: 10px;
+        font-size: 0.75rem;
+        font-weight: 600;
     }
 }
 
@@ -72,10 +73,12 @@ main{
 
   & .contenerdor-img{
     border: #0056b3 solid 2px;
+    width: 100%;
   }
   
   & img{
     width: 100%;
+    height: auto;
   }
 
   & .titulo-favoritos{
@@ -99,7 +102,7 @@ main{
   }
 
   & .card {
-      width: 300px;
+      width: 350px;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 4px 4px 4px 8px rgba(0, 0, 0, 0.1);
@@ -124,6 +127,7 @@ main{
   .card-description {
       font-size: 1em;
       color: #666;
+      padding: 12px 0px;
   }
   
   & .card-button {
@@ -174,9 +178,13 @@ main{
       font-size: 1em;
       cursor: pointer;
       text-decoration: none;
-      border: red 1px solid;
       position: relative;
   }
+
+  & .btn-404:hover {
+    background-color: var(--Azul-claro);
+    cursor: pointer;
+}
 }
 
 
@@ -202,4 +210,10 @@ main{
     align-items: center;
     justify-content: center;
   }
+
+  li{
+    margin: 0px 0px 0px 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
 }

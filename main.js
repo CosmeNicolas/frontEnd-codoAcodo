@@ -1,45 +1,31 @@
-/* const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
+function validarFormulario() {
+  var nombre = document.getElementById('nombre').value;
+  var email = document.getElementById('email').value;
+  var mensaje = document.getElementById('mensaje').value;
 
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
+  if (nombre.trim() === '') {
+      alert('Por favor, ingresa tu nombre.');
+      return false;
+  }
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        menu.classList.remove('active');
-    }
-}); */
+  if (email.trim() === '') {
+      alert('Por favor, ingresa tu email.');
+      return false;
+  }
 
+  if (mensaje.trim() === '') {
+      alert('Por favor, ingresa un mensaje.');
+      return false;
+  }
 
+  // Validación de formato de correo electrónico
+  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!emailPattern.test(email)) {
+      alert('Por favor, ingresa un email válido.');
+      return false;
+  }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    const carouselItems = document.querySelectorAll('.carousel-item');
-  
-    let index = 0;
-  
-    function showItem(idx) {
-      carouselItems.forEach((item, i) => {
-        if (i === idx) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
-    }
-  
-    function nextSlide() {
-      index = (index + 1) % carouselItems.length;
-      showItem(index);
-    }
-  
-    function prevSlide() {
-      index = (index - 1 + carouselItems.length) % carouselItems.length;
-      showItem(index);
-    }
-  
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-  });
+  // Si todas las validaciones pasan, se puede enviar el formulario
+  alert('Formulario enviado exitosamente.');
+  return true;
+}

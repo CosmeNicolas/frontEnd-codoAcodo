@@ -25,9 +25,6 @@
 
 body{
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #DFD0B8;
     font-family: 'Epilogue';
 }
 
@@ -62,6 +59,9 @@ header{
 
 main{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    f
   & .contenerdor-seccion-img{
     width: 100%;
   }
@@ -84,7 +84,6 @@ main{
   & .contenedor-cards-productos{
     display: flex; 
     flex-wrap: wrap;
-    /* flex-direction: column; */
     gap: 1;
   }
 
@@ -129,7 +128,66 @@ main{
       cursor: pointer;
       text-decoration: none;
   }
+  /* quiens sommos */
+ &  .contenedor-quienes-somos {
+    position: relative;
+    text-align: center;
+    color: white; 
+    background-image: url('https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+}
+& .contenido {
+    position: relative; 
+    z-index: 2; 
+}
+& .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+& .titulo-quienes-somos{
+  margin-bottom: 10px;
+}
+/* Contacto*/
+ & .contenedor-contacto {
+  display: flex;
+  justify-content: center;
+  
+  width: 100%;
+}
+& .contenedor-iframe{
+  width: 100%;
+}
+ & .formulario-contacto {
+  width: 100%;
+  background-image: url('../assets/img/jeans.png');
+  background-repeat: round;
+  object-fit: fill;
+  padding: 10px;
+}
+ & label{
+  color: aliceblue;
+  margin-left: 1rem;
+ }
+ &  input, 
+ &  textarea {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+& .contenedor-btn-form{
+  text-align: center;
+}
 
+ 
+  /* error 404 */
   & .contenedor-imagen  {
     position: relative;
     display: inline-block; 
@@ -175,12 +233,41 @@ main{
 }
 
 
-.footer{
-  padding: 23px;
-  background-color: var(--Azul);
-  color: #DFD0B8;
+footer {
+  color: #f1f8ff;
+  display: flex;
+  justify-content: space-around;
+  background-color: #0f172b;
+  padding: 50px;
   text-align: center;
-  font-size: larger;
+  font-family: 'Epilogue';
+}
+
+.titulo-footer {
+  padding: 5px;
+  font-family: 'pacifico';
+  color: var(--Azul-claro);
+}
+
+.titulo-footer ul,
+li {
+  list-style: none;
+  
+}
+
+.img-footer-contacto {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #dcdde0;
+  margin-right: 5px;
+}
+
+.img-redes-footer {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #dcdde0;
 }
 
 /* meadiquereis */

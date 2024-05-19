@@ -72,7 +72,6 @@ main{
   }
 
   & .contenerdor-img{
-    border: #0056b3 solid 2px;
     width: 100%;
   }
   
@@ -81,18 +80,6 @@ main{
     height: auto;
   }
 
-  & .titulo-favoritos{
-    position: absolute;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
-    top: 15%;
-    color: whitesmoke;
-    margin-left: 8px;
-  }
-  
-  & span{
-    color: var(--Veige);
-  }
     /* CARD */
   & .contenedor-cards-productos{
     display: flex; 

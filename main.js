@@ -96,12 +96,3 @@ function scrollToTop() {
 }
 
 
-/* navbar */
-document.addEventListener('DOMContentLoaded', function() {
-  const toggler = document.getElementById('navbarToggler');
-  const navbarCollapse = document.getElementById('navbarSupportedContent');
-
-  toggler.addEventListener('click', function() {
-      navbarCollapse.classList.toggle('show');
-  });
-});
